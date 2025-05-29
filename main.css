@@ -13,6 +13,15 @@ a:active {
 /*================================================================================
   1) MOBILE-FIRST (phones): your original CSS exactly, unchanged
 ================================================================================*/
+img#image {
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-bottom: 15px;
+  width: 75px; /* 30% of the viewport width */
+    
+  height: 100px;
+}
+
 @media (min-width: 200px) {
   nav {
     width: 450px;
@@ -73,14 +82,7 @@ a:active {
     width: 40px;
   }
 
-  img#image {
-  margin-top: 10px;
-  margin-left: 20px;
-  margin-bottom: 15px;
-  width: 75px; /* 30% of the viewport width */
-    
-  height: 100px;
-}
+  
 
 
   #content {
