@@ -74,12 +74,14 @@ a:active {
   }
 
   #content img {
-    margin-top: 10px;
-    margin-left: 20px;
-    margin-bottom: 15px;
-    width: 20vw;
-    height: auto;
-  }
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-bottom: 15px;
+  width: 10vw;   /* 30% of the viewport width */
+  max-width: 60px; /* never exceed 60px */
+  height: auto;  /* keep the aspect ratio */
+}
+
 
   #content {
     margin-left: 20px;
