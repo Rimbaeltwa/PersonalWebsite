@@ -17,9 +17,9 @@ img#image {
   margin-top: 10px;
   margin-left: 100px;
   margin-bottom: 15px;
-  width: 100px; /* 30% of the viewport width */
+  width: 150px; /* 30% of the viewport width */
     
-  height: 125px;
+  height: 200px;
 }
 
 @media (min-width: 200px) {
