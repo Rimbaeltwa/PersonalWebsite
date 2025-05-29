@@ -73,13 +73,13 @@ a:active {
     width: 40px;
   }
 
-  #content img {
+  #image {
   margin-top: 10px;
   margin-left: 20px;
   margin-bottom: 15px;
-  width: 7.5px; /* 30% of the viewport width */
-  height: 10px;
-  max-width: 20px; /* never exceed 60px */
+  width: 20vw; /* 30% of the viewport width */
+  height: auto;
+  max-width: 60px; /* never exceed 60px */
 }
 
 
