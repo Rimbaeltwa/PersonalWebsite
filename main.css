@@ -77,9 +77,9 @@ a:active {
   margin-top: 10px;
   margin-left: 20px;
   margin-bottom: 15px;
-  width: 10vw;   /* 30% of the viewport width */
-  max-width: 60px; /* never exceed 60px */
-  height: auto;  /* keep the aspect ratio */
+  width: 7.5px; /* 30% of the viewport width */
+  height: 10px;
+  max-width: 20px; /* never exceed 60px */
 }
 
 
