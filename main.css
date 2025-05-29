@@ -15,11 +15,11 @@ a:active {
 ================================================================================*/
 img#image {
   margin-top: 10px;
-  margin-left: 20px;
+  margin-left: 50px;
   margin-bottom: 15px;
-  width: 75px; /* 30% of the viewport width */
+  width: 100px; /* 30% of the viewport width */
     
-  height: 100px;
+  height: 125px;
 }
 
 @media (min-width: 200px) {
