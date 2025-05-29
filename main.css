@@ -1,5 +1,5 @@
 /*================================================================================
-  GLOBAL: remove underlines and keep link color inherited on all <a> states
+  GLOBAL: remove link underlines & force inherited color
 ================================================================================*/
 a,
 a:link,
@@ -7,11 +7,11 @@ a:visited,
 a:hover,
 a:active {
   text-decoration: none !important;
-  color: inherit !important;
+  color: inherit    !important;
 }
 
 /*================================================================================
-  1) MOBILE-FIRST (phones): your original CSS unchanged
+  1) MOBILE-FIRST (phones): your original CSS exactly, unchanged
 ================================================================================*/
 @media (min-width: 200px) {
   nav {
@@ -77,8 +77,8 @@ a:active {
     margin-top: 10px;
     margin-left: 20px;
     margin-bottom: 15px;
-    width: 24px;
-    height: 32px;
+    width: 20vw;
+    height: auto;
   }
 
   #content {
@@ -92,10 +92,7 @@ a:active {
     color: black;
   }
 
-  #div-1 {
-    display: flex;
-    flex-direction: column;
-  }
+  #div-1,
   #div-2 {
     display: flex;
     flex-direction: column;
@@ -103,11 +100,10 @@ a:active {
 }
 
 /*================================================================================
-  2) LAPTOP (15.6" ≈1366px+): flex layout, swap in pic.jpg,
-     center bottom WHICH/ONE row, NO grid, NO borders
+  2) LAPTOP (15.6″ ≈1366px+): flex layout, bigger PROJECT text, aligned bottoms
 ================================================================================*/
 @media (min-width: 1366px) {
-  /* top area: two side-by-side panels */
+  /* Top row: two panels */
   #box {
     display: flex;
     flex-direction: row;
@@ -118,16 +114,21 @@ a:active {
     margin: 2rem auto 0;
   }
 
-  /* left panel: PROJECT list (takes ~2/3 width) */
+  /* Left panel: PROJECT list ~66% */
   #div-1 {
-    width: 66%;
+    flex: 0 0 66%;
     margin: 0;
     padding: 0;
   }
 
-  /* right panel: picture + portfolio/blog links (~1/3 width) */
+  /* Increase PROJECT font by 1.25× (30px → 37.5px) */
+  #box a {
+    font-size: 37.5px;
+  }
+
+  /* Right panel: image + links ~32% */
   #div-2 {
-    width: 32%;
+    flex: 0 0 32%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -135,7 +136,7 @@ a:active {
     padding: 0;
   }
 
-  /* picture element: hide <img>, use pic.jpg as background square */
+  /* Make the image a perfect square using pic.jpg */
   #div-2 picture {
     width: 100%;
     padding-top: 100%; /* 1:1 aspect ratio */
@@ -148,34 +149,48 @@ a:active {
     display: none;
   }
 
-  /* portfolio/blog links under the image */
+  /* Under the image: portfolio/blog box */
   #links-box {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
     margin-top: 1rem;
+    width: 100%;
   }
 
-  /* bottom WHICH/ONE row: left box, spacer, right box */
+  /* Bottom row: WHICH/ONE left, spacer, WHICH/ONE right */
   #bottom-box {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
-    gap: 2rem;
     max-width: 1200px;
     margin: 2rem auto;
+    gap: 0; /* we’ll size the middle spacer explicitly */
   }
-  .which-box {
+
+  /* Left WHICH/ONE takes same 66% as #div-1 */
+  #bottom-box > div:first-child {
+    flex: 0 0 66%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
   }
-  #empty-box {
-    width: 2rem;
+
+  /* Middle spacer = 1rem */
+  #bottom-box > div:nth-child(2) {
+    flex: 0 0 1rem;
   }
-  .which-box h2 {
+
+  /* Right WHICH/ONE takes same 32% as #div-2 */
+  #bottom-box > div:last-child {
+    flex: 0 0 32%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Spacing for each “WHICH/ONE” line */
+  #bottom-box h2 {
     margin: 0.5rem 0;
   }
 }
