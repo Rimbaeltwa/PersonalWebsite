@@ -1,65 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8"/>
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  />
-  <link rel="stylesheet" href="main.css"/>
-  <title>My Personal Website</title>
-</head>
-<body>
-  <main>
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="main.css" />
+    <title>My Personal Website</title>
+  </head>
+
+  <body>
     <nav id="navbar">
-      <a href="#welcome-section">Home</a>
-      <a href="#box">Portfolio/Projects</a>
+      <a href="google.com"></a>
+      <a href="#Personal Portfolio" id="line"></a>
     </nav>
 
     <section id="welcome-section">
-      <h1>Welcome to my personal website.</h1>
+      <a id="profile-link" target="_blank"></a>
+      <h1 id="header">Welcome to my personal website.</h1>
+      <section id="projects">
+        <div class="project-tile">
+          <a href="project.com" id="line"></a>
+        </div>
+      </section>
     </section>
 
     <div id="box">
+      <!-- LEFT COLUMN: fill with PROJECT links -->
       <div id="div-1">
-        <a href="project1.html">PORTFOLIO</a>
-        <a href="project2.html">PORTFOLIO</a>
-        <a href="project3.html">PORTFOLIO</a>
-        <!-- …etc -->
+        <a href="project1.html" id="line">PROJECT</a>
+        <a href="project2.html" id="line">PROJECT</a>
+        <a href="project3.html" id="line">PROJECT</a>
+        <a href="project4.html" id="line">PROJECT</a>
+        <a href="project5.html" id="line">PROJECT</a>
+        <a href="project6.html" id="line">PROJECT</a>
+        <a href="project7.html" id="line">PROJECT</a>
+        <a href="project8.html" id="line">PROJECT</a>
+        <a href="project9.html" id="line">PROJECT</a>
+        <a href="project10.html" id="line">PROJECT</a>
+        <a href="project11.html" id="line">PROJECT</a>
       </div>
-
+      <!-- RIGHT COLUMN: square JPG + portfolio/blog links -->
       <div id="div-2">
-        <a href="projectA.html">PROJECTS</a>
-        <a href="projectB.html">PROJECTS</a>
-        <!-- …etc -->
-        <div id="content">
-          <picture>
-            <!-- On laptops ≥1366px this will load pic.jpg -->
-            <source
-              media="(min-width: 1366px)"
-              srcset="pic.jpg"
-            />
-            <!-- Otherwise face.jpg -->
-            <img src="face.jpg" alt="My photo"/>
-          </picture>
-          <a href="blog.html" id="over-blog">./BLOG</a>
+        <picture>
+          <!-- laptop will pick this -->
+          <source
+            media="(min-width: 1366px)"
+            srcset="pic.jpg"
+          />
+          <!-- default for mobile -->
+          <img
+            id="image"
+            src="face.jpg"
+            alt="My photo"
+          />
+        </picture>
+        <div id="links-box">
+          <a href="portfolio.html">./PORTFOLIO</a>
+          <a href="blog.html">./BLOG</a>
         </div>
       </div>
     </div>
 
+    <!-- BOTTOM ROW: WHICH/ONE left, spacer, WHICH/ONE right -->
     <div id="bottom-box">
-      <div>
+      <div class="which-box">
         <h2>WHICH / ONE</h2>
         <h2>WHICH / ONE</h2>
         <h2>WHICH / ONE</h2>
       </div>
       <div id="empty-box"></div>
-      <div>
+      <div class="which-box">
         <h2>WHICH / ONE</h2>
         <h2>WHICH / ONE</h2>
         <h2>WHICH / ONE</h2>
       </div>
     </div>
-  </main>
-</body>
+  </body>
 </html>
