@@ -109,6 +109,6 @@ a {
   }
   /* larger WHICH/ONE text */
   #bottom-box > div:not(#empty-box) h2 {
-    font-size: 2rem;
+    font-size: 4rem;
   }
 }
